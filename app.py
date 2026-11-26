@@ -6,10 +6,13 @@ app = Flask(__name__)
 # Change both constants in Lab 3, then build a DIFFERENT image.
 CODE_VERSION = "v1"
 GREETING = "Hello from the original Flask release"
+CODE_VERSION_2 = "v2"
+GREETING_2 = "Let's get dinner soon!"
 
 @app.get("/")
 def index():
-    return jsonify(greeting=GREETING, version=CODE_VERSION)
+    # return jsonify(greeting=GREETING, version=CODE_VERSION)
+    return jsonify(greeting=GREETING_2, version=CODE_VERSION_2)
 
 @app.get("/version")
 def version():
